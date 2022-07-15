@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(136, 136, 223, 0.4);
+}
+
+button { 
+  cursor: pointer;
+}
+
+.container {
+  width: 45%;
+  height: 60%;
+  border-radius: 17px;
+  background: white;
+}
+
+header {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto 12px;
+}
+
+header span {
+  font-weight: 900;
+  font-size: 24px;
+  word-break: break-all;
+}
+
+@media (max-width: 700px) {
+  body {
+     font-size: 10px;
+   }
+   
+   .header span {
+     font-size: 15px;
+   }
+   .container{
+    width: 85%!important;
+   }
+
+   .modal {
+     width: 100%!important;
+   }
+ 
+   .modal label {
+     font-size: 20px!important;
+     width: 100%;
+   }
+  
+   .modal button {
+    width: 40%!important;
+   }
+ }
+
+  
+  .modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px;
+    background-color: white;
+    border-radius: 10px;
+    width: 100%;
+  }
+  
+  .modal label {
+    font-size: 15px;
+    font-weight: 500;
+    width: 100%;
+  }
+  
+  .modal input {
+    width: 100%;
+    margin-right: 0px;
+    outline: none;
+    padding: 10px 10px; 
+    margin-bottom: 10px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  
+  .modal button {
+    width: 30%;
+    margin: 20px auto;
+    outline: none;
+    border-radius: 17px; 
+    padding: 5px 10px; 
+    border: none;
+    background-color: rgb(136, 136, 223);
+    color: white;
+    font-size: 16px;
+  }
+  
+  .active {
+    display: flex;
+  }
+  
+  .active .modal {
+    animation: modal .4s;
+  }
+  
+  @keyframes modal {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -60px, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  #WrongInfo{
+    cursor: default;
+    color: white;
+  }
